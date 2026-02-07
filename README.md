@@ -294,22 +294,13 @@ Created with patience, respect, and quiet intention.
 
 🖼️ *Love Forever* – `Rose — Quiet Elegance`
 
-*Radial Gradient Sky, Glowing Moon, Twinkling Stars, Falling Star, Floating Hearts, Heartbeat Title, Love Letter Box*
-A poetic visual layout featuring a starry night background, calm color palette, and refined typography designed to feel gentle and intentional.
-
 ![A Heartfelt Digital Love Expression](Rose.png)
 
 🖼️ *Dynamic Visual* – `Canvas Effects & Ambient Motion`
 
-*Animated Heartbeat, Glowing Aura, Floating Sparks, and Soft Pulse Effect*
-Includes a typewriter-style poem animation, interactive modal letters, and soft motion transitions that maintain emotional restraint while staying expressive.
-
 ![A Heartfelt Digital Love Expression – Love in Motion](Overview.png)
 
 🖼️ *Alternate Visual* – `Typing Poem & Interactive Sections`
-
-*A different angle showing the same dreamy love letter*
-Subtle canvas-based effects such as neon hearts, floating particles, and ambient movement that add emotional depth without overwhelming the viewer.
 
 ![A Heartfelt Digital Love Expression – Alt View](Preview.png)
 
