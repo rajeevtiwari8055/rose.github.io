@@ -3,6 +3,8 @@
 
 **Rose — Quiet Elegance** is a deeply expressive, visually rich, and emotionally restrained front-end web project, thoughtfully created as a **Valentine-inspired digital experience**.
 
+`[View the website](https://rajeevtiwari8055.github.io/rose.github.io/)`
+
 This project transforms emotions into an interactive space using **motion, poetry, sound, and silence** — where every animation, glow, and transition exists for a reason.
 
 It is not loud.  
@@ -212,7 +214,7 @@ This project strengthened both **technical skills and creative sensitivity**.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rajeevtiwari8055.ritu.github.io
+   git clone https://github.com/rajeevtiwari8055/rose.github.io
    
 2. Open index.html in any modern web browser
 
@@ -305,6 +307,7 @@ Created with patience, respect, and quiet intention.
 ![A Heartfelt Digital Love Expression – Alt View](Preview.png)
 
 ---
+
 
 
 
