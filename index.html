@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ritu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- footer typing -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<!-- Love Theme Font -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Google Fonts Link  -->
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+<style>
+
+  /* ---------- TWINKLING STAR EFFECT ---------- */
+.stars, .stars2, .stars3 {position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: block;background-repeat: repeat;background-size: contain;z-index: -1;}
+.stars {background-image: url("https://www.transparenttextures.com/patterns/stardust.png");animation: twinkling 8s linear infinite;opacity: 0.6;}
+.stars2 {background-image: url("https://www.transparenttextures.com/patterns/tiny-cross-hatch.png");animation: twinkling 12s linear infinite;opacity: 0.4;}
+.stars3 {background-image: url("https://www.transparenttextures.com/patterns/stardust.png");animation: twinkling 20s linear infinite;opacity: 0.2;}
+@keyframes twinkling {0% { opacity: 0.3; }50% { opacity: 0.9; }100% { opacity: 0.3; }}
+
+  :root {--accent1: #ff5fa0;--accent2: #7b50ff;--muted: #efe8f3;}
+  body {font-family: 'Poppins', sans-serif;background: #03020a;color:var(--muted);margin:0;padding: 0;}
+  .footer {padding: 28px 12px;text-align: center;font-size: 1rem;font-weight: 500;letter-spacing: 0.5px;}
+  #footerTyping {font-family:'Dancing Script', cursive;font-weight:700;font-size:1.4rem;background:linear-gradient(90deg, var(--accent2), var(--accent1));-webkit-background-clip:text;color:transparent;display:inline-block;white-space:nowrap;}
+  :root{--bg1: #03020a;--bg2: #0b0712;--accent1: #ff5fa0;--accent2: #7b50ff;--muted: #bfb7c6;}
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Merriweather",serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#efe8f3;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  header{position:fixed;left:0;right:0;top:14px;z-index:120;display:flex;justify-content:center;pointer-events:auto}
+  .nav{display:flex;gap:10px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));padding:8px 14px;border-radius:999px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.02)}
+  .nav a{font-weight:600;text-decoration:none;padding:8px 12px;border-radius:10px;color:var(--muted);font-size:0.95rem}
+  .nav a:hover{background:linear-gradient(90deg,var(--accent2),var(--accent1));-webkit-background-clip:text;color:transparent}
+  main{scroll-behavior:smooth}
+  .section{min-height:100vh;padding:120px 20px 80px 20px;display:flex;align-items:center;justify-content:center;position:relative}
+  .wrap{width:100%;max-width:1100px;margin:0 auto}
+  .hero{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:center;z-index:6;position:relative}
+  @media (max-width:920px){.hero{grid-template-columns:1fr}.hero-right{order:-1}}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));padding:28px;border-radius:18px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 30px 90px rgba(0,0,0,0.7)}
+  .title {font-size:2.5rem;margin:0;line-height:1.2;font-weight:700;font-family:"Merriweather", serif;background:linear-gradient(90deg, var(--accent2), var(--accent1));-webkit-background-clip:text;color:transparent;}
+  .lead{color:var(--muted);margin-top:10px;font-size:1.05rem}
+  .controls{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+  .btn{background:linear-gradient(180deg,var(--accent1),var(--accent2));border:0;color:white;padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:700;box-shadow:0 12px 36px rgba(120,60,140,0.12)}
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);box-shadow:none}
+  .photo{width:100%;height:250px;border-radius:14px;background-size:cover;background-position:center;border:3px solid rgba(255,255,255,0.03);box-shadow:0 22px 60px rgba(0,0,0,0.6);transition:transform .4s,filter .35s}
+  .photo:hover{transform:translateY(-8px) scale(1.02);filter:brightness(1.03)}
+  .poem-box{margin-top:18px;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+  .poem-text{font-size:1.05rem;line-height:1.6;color:#e9e0eb;min-height:72px;white-space:pre-wrap}
+  .section-title{font-family:"Merriweather",serif;color:var(--accent2);font-size:1.4rem;margin:0}
+  .slideshow{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:12px;flex-wrap:wrap}
+  .slide{width:500px;height:400px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;border:4px solid rgba(255,255,255,0.03);box-shadow:0 18px 60px rgba(0,0,0,0.6);transition:transform .45s}
+  .slide.center{transform:scale(1.04)}
+  .footer{padding:28px 12px;text-align:center;color:var(--muted)}
+  .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:200;background:rgba(3,2,6,0.6);visibility:hidden;opacity:0;transition:opacity .25s,visibility .25s}
+  .modal.show{visibility:visible;opacity:1}
+  .modal .inner{width:90%;max-width:760px;background:linear-gradient(180deg, rgba(10,6,12,0.98), rgba(15,9,18,0.99));padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 40px 120px rgba(0,0,0,0.7)}
+  .modal .close{float:right;background:none;border:0;color:var(--muted);font-size:22px;cursor:pointer}
+
+  /* canvas layers */
+  canvas#particleCanvas, canvas#neonCanvas {position:fixed;left:0; top:0;width:100%; height:100%;pointer-events:none;}
+  canvas#particleCanvas { z-index:1; } canvas#neonCanvas { z-index:2; }
+  @media (max-width:520px){ .title{font-size:2rem} .photo{max-width:280px;height:160px} .slide{width:220px;height:140px} .hero{padding:12px} }
+
+  /* Beating Heart (Dynamic) */
+    .heart{font-size:24px;animation:beat 1s infinite;}
+    .fa-bars {font-size: 24px;animation: none;}
+    @keyframes beat{0%{transform:scale(1);}50%{transform:scale(1.3);}100%{transform:scale(1);}}
+    
+  /* Menu */
+.menu {display: none;list-style: none;padding: 10px;}
+.menu.show {display: block;}
+.menu li {margin: 6px 0;}
+.menu a {font-family: 'Dancing Script', cursive;color: magenta;font-size: 1.2rem;text-decoration: none;}
+
+ /* FOOTER */
+.site-footer{background:transparent;padding:40px 80px 30px;color:#ff6f61;font-family: 'Allura', cursive;font-size: 1.6rem;}
+.footer-links strong{color:#ff6f61;display:block;margin-bottom:14px;font-size:20px;}
+.footer-links a{display:block;width:max-content;margin:6px 0;color:deeppink;text-decoration:none;position:relative;transition:0.3s;}
+.footer-links a::after,
+.dev-link::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:magenta;transition:0.4s;}
+.footer-links a:hover{color:magenta;}
+.footer-links a:hover::after,
+.dev-link:hover::after{width:100%;}
+.policy-links{margin-top:14px;}
+.footer-divider{height:1px;background:deeppink;margin:22px 0;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.dev-link{color:deeppink;text-decoration:none;position:relative;}
+.dev-link:hover{color:magenta;}
+
+/* Base nav layout */
+.nav{width: 100%;max-width: 100%;display: flex;align-items: center;justify-content: space-between;padding: 12px 20px;box-sizing: border-box;}
+.hamburger{display: none;font-family:'Dancing Script', cursive;font-size: 1.1rem;color: deeppink;cursor: pointer;align-items: center;gap: 6px;}
+@media (max-width:900px){
+  .hamburger{display: flex;}
+  nav ul{display: none;flex-direction: column;position: absolute;top: 70px;right:0;width: 120px;border-radius: 10px;overflow: hidden;background: transparent;}
+  nav ul.show{display: flex;}
+  nav ul a{padding: 12px 20px;display: block;font-family:'Dancing Script', cursive;font-size: 1.2rem;color: deeppink;text-decoration: none;border-bottom: 1px solid rgba(255,255,255,0.2);}}
+
+</style>
+</head>
+<body>
+
+<!-- Background stars -->
+<div class="stars"></div>
+<div class="stars2"></div>
+<div class="stars3"></div>
+
+<!-- NAV -->
+<header>
+<nav class="nav" role="navigation" aria-label="Main">
+<span style="display:inline-flex; align-items:center; gap:6px;">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.AeQNOiEh3dF59i1ffNlZ9gAAAA?pid=ImgDet&w=187&h=275&c=7&dpr=1.3&o=7&rm=3" alt="Profile" style="width:40px; height:40px; border-radius:50%; border:1px solid deeppink; object-fit:cover; display:block;">
+  <h2 style="color:deeppink; margin:0; font-size:25px; font-weight:600; font-family: 'Dancing Script', cursive;">Rose</h2>
+</span>
+<div class="hamburger" onclick="toggleMenu()"><i id="menuIcon" class="fas fa-heart heart"></i> Our Story</div>
+<ul id="menu" class="menu">
+<a href="#home" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">Home</a>
+<a href="#quiet-grace" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">Quiet Grace</a>
+<a href="#memories" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">Memories</a>
+<a href="#gentle-glimpses" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">Gentle Glimpses</a>
+<a href="#promise" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">Promise</a>
+<a href="#letter" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">Letter</a>
+<a href="#contact-us" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">Contact Me</a>
+</ul>
+</nav>
+</header>
+
+<!-- Canvas layers for neon heart + particles + nebula -->
+<canvas id="neonCanvas" aria-hidden="true"></canvas>
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="section" aria-label="Home">
+    <div class="wrap">
+      <div class="hero">
+        <div class="card" style="position:relative;z-index:6">
+          <h2 class="title" style="font-family:'Dancing Script', cursive; font-weight:700; font-size:2.5rem; background:linear-gradient(90deg, #7b50ff, deeppink); 
+    -webkit-background-clip:text; color:transparent; text-align:center; line-height:1.2;">Rose — Quiet Elegance</h2>
+          <p style="font-family: 'Dancing Script', cursive; color: #ff5fa0; font-size: 1.35rem;">Your kindness and your quiet beauty have settled within me in a way I can never fully put into words.</p>
+          <div class="controls" role="group" aria-label="Controls">
+  <button class="btn" id="playBtn" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color:white;">
+  Play Melody <i class="fas fa-music heart"></i></button>
+  <button class="btn ghost" id="openPoem" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: #ff6f61;">
+  Open Quiet Grace</button>
+<button class="btn ghost" id="openLetter" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: #ff6f61;">
+  Quiet Note</button>
+          </div>
+
+          <div class="poem-box" aria-live="polite" aria-atomic="true">
+            <!-- Poem Preview Div -->
+          <div id="poemPreview" class="poem-text" style="font-family:'Allura', cursive; color:#c890ff; font-size:1.5rem;">
+          Click "Quiet Grace" to read softly whispered words… <i class="fas fa-comment-dots"></i></div>
+          </div>
+        </div>
+
+        <aside class="hero-right" style="display:flex;flex-direction:column;gap:12px;align-items:center">
+          <div class="photo" id="p1" style="background-image:url('https://tse1.mm.bing.net/th/id/OIP.uIb3BIqbUCPIYZY51sBZuQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3')" role="img" aria-label="Photo 1"></div>
+          <div class="photo" id="p2" style="background-image:url('https://images.hdqwalls.com/download/blue-eyes-blonde-girl-hd-1336x768.jpg')" role="img" aria-label="Photo 2"></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiet Grace -->
+  <section id="quiet-grace" class="section" aria-label="Poem">
+    <div class="wrap">
+      <div class="card center">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">Quiet Grace <i class="fas fa-feather-alt"></i></h2>
+        <p style="font-family: 'Allura', cursive; color: #c890ff; font-size: 1.5rem; margin-top: 8px;">
+          Soft Glimpses — her words and presence unfold slowly.</p>
+        <div style="margin-top:14px;display:flex;gap:12px;justify-content:center">
+          <button class="btn" id="startType" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: white;">
+           Whispered Words</button>
+          <button class="btn ghost" id="resetType" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: #ff6f61;">
+           Reset</button>
+        </div>
+
+        <div class="poem-box" style="margin-top:18px">
+          <div id="typed" class="poem-text" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memories -->
+  <section id="memories" class="section" aria-label="Gallery">
+    <div class="wrap">
+      <div class="card">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">Images & Memories <i class="fas fa-images"></i></h2>
+        <p style="font-family: 'Allura', cursive; color: #c890ff; font-size: 1.5rem; margin-top: 8px;">
+          Swipe or use arrows to browse.</p>
+        <div class="slideshow" id="slideshow" style="margin-top:12px">
+          <div class="slide center" id="mainSlide" style="background-image:url('https://img.freepik.com/premium-photo/close-up-portrait-attractive-young-woman-leaning-hands-glancing-with-eyes_33839-14303.jpg')"></div>
+          <div class="slide" id="nextSlide" style="background-image:url('https://img.freepik.com/premium-photo/close-up-portrait-smiling-young-woman-with-hands-face_33839-14291.jpg')"></div>
+          <div class="slide" id="prevSlide" style="background-image:url('https://img.freepik.com/premium-photo/smiling-beauty-perfect-redhead-woman-fashion-model-cosmetology-aesthetic-medicine-concept_263368-1864.jpg')"></div>
+        </div>
+
+        <div style="display:flex;gap:10px;justify-content:center;margin-top:12px">
+          <button class="btn" id="prevBtn">◀︎</button>
+          <button class="btn" id="nextBtn">▶︎</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gentle Glimpses -->
+  <section id="gentle-glimpses" class="section" aria-label="Gentle Glimpses">
+    <div class="wrap">
+      <div class="card center">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">Gentle Glimpses <i class="fas fa-star"></i></h2>
+        <p style="font-family: 'Allura', cursive; color: #c890ff; font-size: 1.5rem; margin-top: 8px;">
+          Rose, your trust is the greatest blessing of my life. You understood my silence, guided my steps, and accepted me with all my flaws. I will always respect, protect, and honor the faith you placed in me — today and forever.</p>
+
+         <audio controls autoplay> 
+          <source src="images/Barbaad_Reprise.mp3" type="audio/mpeg">
+            </audio>
+
+  <marquee bgcolor="transparent" scrollamount="8px" direction="right">          
+               <img src="data:image/webp;base64,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" width="300">
+               <img src="https://tse4.mm.bing.net/th/id/OIP.BpAd48fvsDTeHCO9elJPQgHaNK?pid=ImgDet&w=187&h=331&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse1.mm.bing.net/th/id/OIP.2iYXZaw4iE3avJoRgDx8zAHaLH?pid=ImgDet&w=187&h=280&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse4.mm.bing.net/th/id/OIP.ZuP4weSTSRGpXxKl_0uW6wHaNK?pid=ImgDet&w=187&h=331&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.FUYGJlv-aAIDQb0zdi1xYwHaNK?w=187&h=395&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://tse2.mm.bing.net/th/id/OIP.6Ae7INfGPcPgbd2Ix-CUUgHaO0?pid=ImgDet&w=175&h=350&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse1.mm.bing.net/th/id/OIP.-dPLlVjphwhwC1YXoJZXQgHaLH?pid=ImgDet&w=187&h=280&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse1.explicit.bing.net/th/id/OIP.IAtOZRqem9U6ji8rU8f7KwHaLH?pid=ImgDet&w=187&h=280&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse3.mm.bing.net/th/id/OIP.Vvx2F0shN7JgHjOymH1lsQHaLH?pid=ImgDet&w=187&h=280&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse3.mm.bing.net/th/id/OIP.cOHXDVI3qx4bsaGvVmIffAHaQC?pid=ImgDet&w=162&h=350&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse1.mm.bing.net/th/id/OIP.HaHHeRqcyF16U3v8tr0WOAHaKO?pid=ImgDet&w=187&h=258&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse4.mm.bing.net/th/id/OIP.9Li6khFDHK0LNs3mKhXa-wAAAA?pid=ImgDet&w=187&h=291&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse4.mm.bing.net/th/id/OIP.a-d8uWqfVab0xWlsyhLrtQHaNL?pid=ImgDet&w=187&h=333&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse3.mm.bing.net/th/id/OIP.O_JXKoCN3Pzb6U_HINgFUAHaNK?pid=ImgDet&w=187&h=331&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse2.mm.bing.net/th/id/OIP.9V1xhPV7SBygUd-bzO6g2QHaNK?pid=ImgDet&w=187&h=331&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse2.mm.bing.net/th/id/OIP.ab0o-b78GZ5xYMDHfROwgQHaMM?pid=ImgDet&w=187&h=307&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse4.mm.bing.net/th/id/OIP.gf2aluHkW6qxvPvnRUZ8OAHaLG?pid=ImgDet&w=187&h=280&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse1.mm.bing.net/th/id/OIP.TjfSFDPrcL_JFvVuGBSHdgHaM9?pid=ImgDet&w=187&h=327&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse4.mm.bing.net/th/id/OIP.Lwy4MEAC0DDlJHw47pTeeAHaPO?pid=ImgDet&w=170&h=350&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse1.explicit.bing.net/th/id/OIP.nlKoqfDoc1hYAKKCC_f1cwAAAA?pid=ImgDet&w=187&h=331&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse3.mm.bing.net/th/id/OIP.N8PX2eJRfan1_AeFP2qVCQHaLH?pid=ImgDet&w=187&h=280&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://tse3.mm.bing.net/th/id/OIP.nRGPNJCS92jbyrLmD-rjWAHaLH?pid=ImgDet&w=184&h=276&c=7&dpr=1.3&o=7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIF.s8yYUfgt2m4VnuKaLeYqKg?w=208&h=260&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.bDlkP-frWx6COiP8MjHJvwHaLH?w=208&h=305&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP._qOXfL3O-Hwuu9syz6qLIgHaNJ?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.N2E5q0L3g_BvJrUXCG20qAHaQC?w=161&h=349&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.oHVUBfpRAFpu8BcwU7EzxQHaNK?w=208&h=326&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.w8-ubNhv9p0onK3IEvFfSAHaKl?w=208&h=297&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.Ngm_Ve421dsyDiE04THzNQHaNO?w=187&h=334&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.Rg0AwUfDJFbngNrPG7KNqQHaO0?w=174&h=349&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.CUBm-uBo8MORG_lMOCQTrQHaNL?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.w8ufRop5DxOizZB0QXZA4gHaLH?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.v9Vglw5t8q-t_wfSsyWGzwHaO0?w=174&h=349&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.J8DUYf2JabgTh9M5W-yvMgHaNK?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.SRvlN18ctUQF6S1W-majoAHaO0?w=208&h=367&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.2xZ-9GL0GllgG4N931Hb3wHaMg?w=192&h=324&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.N9jHm5bG6YRFYdOuqqV5nAHaJQ?w=208&h=260&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.2xZ-9GL0GllgG4N931Hb3wHaMg?w=192&h=324&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.dDTgc_gLtEEIOLOfKaYJlQHaNN?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.oUNpUf0MWiCrk91eAZg5YQHaNI?w=187&h=332&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.S6P7ALIEe2tL-STfFgaDvgHaNK?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.FANCKGJdnY_tpYJQeej4OgHaJ4?w=208&h=277&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.lS4mef4kOZWRfjj0Vlsb0wHaLG?w=208&h=305&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.w3ZeC9ynVDnEtuQ65CYOuAHaO0?w=174&h=349&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.eAyIYO4gFMM1qx_gUogxcAHaPN?w=208&h=365&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.3NwzM2731HlVzcPY7iTEyQHaNa?w=185&h=336&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.Ce3fLA61h2HhuAMh0dCbNwHaNK?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.FUYGJlv-aAIDQb0zdi1xYwHaNK?w=187&h=395&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300"> 
+               <img src="https://th.bing.com/th/id/OIP.2BV_i1fUEvoxj3o2zgs8wgHaO0?w=174&h=349&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.fqs9ICwQnwu-Eu2mdj9yKgHaNK?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               <img src="https://th.bing.com/th/id/OIP.Mxe2i5oc54AN5z7RJ4GXsQHaNK?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="300">
+               </marquee>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE -->
+  <section id="promise" class="section" aria-label="Promise">
+    <div class="wrap">
+      <div class="card">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">A Promise <i class="fas fa-hand-holding-heart"></i></h2>
+        <p style="font-family: 'Allura', cursive !important; color: #c890ff; font-size: 1.5rem; margin-top: 8px;">
+         Rose, your trust means more to me than words can ever express. You understood me, stood by me, and accepted me just the way I'm — and I will always honor the faith you placed in me. — Awdhesh</p>
+
+        <div style="margin-top:14px;display:flex;gap:12px;align-items:center">
+<button class="btn" id="openModal" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: white;">
+  Read Quiet Note</button>
+<button class="btn ghost" id="downloadBtn" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: #ff6f61;;">
+  Download Letter</button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LETTER -->
+  <section id="letter" class="section" aria-label="Letter">
+    <div class="wrap">
+      <div class="card center">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">A Quiet Letter <i class="fas fa-envelope-open-text"></i></h2>
+        <p style="font-family: 'Allura', cursive; color: #ff5fa0; font-size: 1.5rem; margin-top: 8px; line-height: 1.6;">
+  Dear Rose,
+  <br>
+  I want to sincerely thank you for your patience, your understanding, and the love you show in the quietest ways.
+  You accepted me with all my flaws, stood by me, and shared a warmth and wisdom that I deeply cherish.
+  Every moment, every word, and every gentle gesture stays with me. I respect you deeply, and I will always honor the trust you have placed in me.
+  <br>
+  Thank you, Rose, for being my partner, my calm, and my inspiration. <br> — Peter
+
+      </div>
+      <div class="footer" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem; text-align: center;">
+       Made with <i class="fas fa-heart heart"></i> & deep respect for Rose<br><span id="footerTyping"></span></div>
+     </div>
+  </section>
+</main>
+
+<!-- HERO -->
+<section id="contact-us" aria-label="Home">
+    
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-links">
+      <strong>Quick Links <i class="fas fa-link"></i></strong>
+      <a href="#home">Home</a>
+      <a href="#memories">Memories</a>
+      <a href="#gentle-glimpses">Gentle Glimpses</a>
+      <a href="#letter">Letter</a>
+
+      <div class="policy-links">
+        <strong class="footer-heading">Legal <i class="fas fa-gavel"></i></strong>
+         <a href="terms.html" target="_blank">Terms & Conditions</a>
+         <a href="privacy.html" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+<div class="footer-divider"></div>
+<div class="footer-bottom">
+  <span>© <span id="year"></span> <span style="color:deeppink;"> Peter's</span> website | All rights reserved</span>
+  <span>Designed & Developed by<a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" class="dev-link"> Rajeev Dataverse <i class="fab fa-linkedin-in"></i></a></span>
+</div>
+</footer>
+
+<script>
+// DYNAMIC YEAR
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- modal long note -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="inner" role="document">
+    <button class="close" id="closeModal" aria-label="Close">✕</button>
+    <h3 style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem; margin-top: 2px;">Quiet Note</h3>
+   <p style="font-family: 'Allura', cursive; color: #ff5fa0; font-size: 1.5rem; line-height: 1.7; margin-top: 8px;" id="longNote">
+    Rose — your presence means more to me than words can say. I deeply value your trust and will always honor it.</p>
+  </div>
+</div>
+
+<!-- audio (user gesture required to play) -->
+<audio id="bgAudio" src="images/Saiyaara Reprise.mp3" loop preload="auto"></audio>
+
+<script>
+
+/* --------- Rose typing text --------- */
+const footerTyping = document.getElementById('footerTyping');
+    const text = "Rose — Always thankful";
+    let idx = 0;
+    let forward = true;
+
+    function typeFooterLoop() {
+      if(forward){
+          footerTyping.textContent += text[idx];
+          idx++;
+          if(idx >= text.length){
+              forward = false;
+              setTimeout(typeFooterLoop, 1000); // pause at end
+              return;
+          }
+      } else {
+          footerTyping.textContent = '';
+          idx = 0;
+          forward = true;
+      }
+      setTimeout(typeFooterLoop, 250); // typing speed
+    }
+
+    typeFooterLoop();
+
+/* --------- Page UI: audio, poem, modal, slideshow (from your earlier code) --------- */
+const bg = document.getElementById('bgAudio');
+const playBtn = document.getElementById('playBtn');
+let playing = false;
+function updatePlayText(){ playBtn.textContent = playing ? 'Pause Melody' : 'Play Melody'; }
+playBtn.addEventListener('click', async (e)=>{
+  e.preventDefault();
+  try {
+    if(bg.paused){ await bg.play(); playing = true; }
+    else { bg.pause(); playing = false; }
+  } catch(err){ playing = false; }
+  updatePlayText();
+});
+document.addEventListener('click', function enableOnce(){
+  if(bg.paused){ bg.play().then(()=>{ playing=true; updatePlayText(); }).catch(()=>{}); }
+  document.removeEventListener('click', enableOnce);
+});
+
+const poemLines = [
+  "Your presence lights my life in ways I never knew were possible — softly, calmly, and beautifully.",
+  "There is a quiet strength and a natural grace in you that stays with me, even in silence.",
+  "Simplicity, grace, and gentle beauty follow you effortlessly — comforting, inspiring, and deeply loved.",
+  "For everything you are and everything you bring into my life, I carry a quiet gratitude for your warmth, your elegance, and your presence — beyond what words can hold. — Peter"
+];
+
+
+const typedEl = document.getElementById('typed');
+let typing=false;
+document.getElementById('startType').addEventListener('click', ()=> startTyping(poemLines, typedEl));
+document.getElementById('resetType').addEventListener('click', ()=> { typedEl.textContent=''; typing=false; });
+
+function startTyping(lines, el){
+  if(typing) return;
+  typing = true;
+  el.textContent = '';
+  let i = 0;
+  function next(){
+    if(i >= lines.length){ typing=false; return; }
+    typeLine(lines[i], el, ()=>{ i++; setTimeout(next, 600); });
+  }
+  next();
+}
+function typeLine(text, el, cb){
+  let idx=0;
+  const speed = 20 + Math.random()*25;
+  el.textContent += '\n';
+  const t = setInterval(()=>{
+    el.textContent += text[idx] || '';
+    idx++;
+    if(idx > text.length){ clearInterval(t); cb(); }
+  }, speed);
+}
+document.getElementById('openPoem').addEventListener('click', ()=>{
+  startTyping(poemLines, typedEl);
+  location.hash = '#poem';
+  document.getElementById('poemPreview').textContent = poemLines.join('\n');
+});
+
+const modal = document.getElementById('modal');
+document.getElementById('openLetter').addEventListener('click', ()=> { modal.classList.add('show'); modal.style.visibility='visible'; modal.setAttribute('aria-hidden','false'); });
+document.getElementById('openModal').addEventListener('click', ()=> { modal.classList.add('show'); modal.style.visibility='visible'; modal.setAttribute('aria-hidden','false'); });
+document.getElementById('closeModal').addEventListener('click', ()=> { modal.classList.remove('show'); modal.style.visibility='hidden'; modal.setAttribute('aria-hidden','true'); });
+window.addEventListener('keydown', e=> { if(e.key==='Escape') { modal.classList.remove('show'); modal.style.visibility='hidden'; modal.setAttribute('aria-hidden','true'); } });
+
+document.getElementById('downloadBtn').addEventListener('click', ()=>{
+  const text = `Midnight Note for Rose\n\n${document.getElementById('longNote').innerText}\n\n— This letter carries a small piece of my heart,
+written with love that grows stronger with every passing day.
+Life feels calmer, fuller, and more meaningful by your side.
+Every shared moment is a quiet blessing I hold close.
+This is a reminder that you are the most beautiful truth of my life.`;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = 'Midnight_Note_for_Rose.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+});
+
+/* --------- CANVAS EFFECTS: dots + neon heart + click burst hearts --------- */
+const neonCanvas = document.getElementById('neonCanvas');
+const particleCanvas = document.getElementById('particleCanvas');
+
+const nctx = neonCanvas.getContext('2d');
+const pctx = particleCanvas.getContext('2d');
+
+let W = neonCanvas.width = particleCanvas.width = innerWidth;
+let H = neonCanvas.height = particleCanvas.height = innerHeight;
+
+/* utility */
+function rand(a,b){ return Math.random()*(b-a)+a; }
+
+/* ---------- background floating dots (red + purple) ---------- */
+const dots = [];
+
+/* Dots slightly reduced, but still screen-adaptive */
+const DOT_COUNT = Math.round(Math.max(60, (W * H) / (2600 * 1)));
+
+for (let i = 0; i < DOT_COUNT; i++) {
+  dots.push({
+    x: Math.random() * W,
+    y: Math.random() * H,
+    r: Math.random() * 2 + 0.8,
+    sx: (Math.random() - 0.5) * 0.45,
+    sy: (Math.random() - 0.5) * 0.45,
+
+    /* SAME COLORS — only switching between purple + red */ 
+    color: Math.random() < 0.5 ? 'mediumvioletred' : 'deeppink'
+  });
+}
+
+/* ---------- burst hearts (spawn on click) ---------- */
+let hearts = [];
+function Heart(x,y,dx,dy,size,hue){
+  this.x=x; this.y=y; this.dx=dx; this.dy=dy; this.size=size; this.hue=hue; this.alpha=1;
+}
+Heart.prototype.update = function(dt){
+  this.x += this.dx*dt;
+  this.y += this.dy*dt;
+  this.dy += 180 * dt; // gravity
+  this.alpha -= 0.012 * dt * 60;
+  this.size *= 0.997;
+};
+Heart.prototype.draw = function(ctx){
+  ctx.save();
+  ctx.translate(this.x, this.y);
+  ctx.scale(this.size/40, this.size/40);
+  ctx.beginPath();
+  ctx.moveTo(0,-12);
+  ctx.bezierCurveTo(12,-40,52,-18,0,32);
+  ctx.bezierCurveTo(-52,-18,-12,-40,0,-12);
+  ctx.closePath();
+  ctx.fillStyle = `hsla(${this.hue},85%,60%,${Math.max(0,this.alpha)})`;
+  ctx.fill();
+  ctx.restore();
+};
+function spawnHearts(x,y,n=8){
+  for(let i=0;i<n;i++){
+    hearts.push(new Heart(
+      x + rand(-14,14),
+      y + rand(-14,14),
+      rand(-160,160),
+      rand(-420,-80),
+      rand(12,36),
+      rand(300,360)
+    ));
+  }
+}
+
+/* ---------- small glowing particles (nebula) ---------- */
+let smallParticles = [];
+function Particle(x,y,dx,dy,size,hue){
+  this.x=x; this.y=y; this.dx=dx; this.dy=dy; this.size=size; this.hue=hue; this.alpha=1;
+}
+Particle.prototype.update = function(dt){
+  this.x += this.dx*dt; this.y += this.dy*dt;
+  this.alpha -= 0.004 * dt * 60;
+  this.size *= 0.998;
+};
+Particle.prototype.draw = function(ctx){
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.closePath();
+  ctx.fillStyle = `hsla(${this.hue},65%,60%,${Math.max(0,this.alpha*0.35)})`; ctx.fill();
+  ctx.restore();
+};
+function spawnParticles(x,y,n=6){
+  for(let i=0;i<n;i++){
+    smallParticles.push(new Particle(
+      x + rand(-60,60),
+      y + rand(-60,60),
+      rand(-12,12),
+      rand(-6,6),
+      rand(6,26),
+      rand(280,340)
+    ));
+  }
+}
+
+/* ---------- neon parametric heart (single, top-center) ---------- */ 
+function drawNeonHeart(ctx,cx,cy,size,t){
+  ctx.save();
+  ctx.translate(cx,cy);
+  ctx.globalCompositeOperation = 'lighter';
+  const hue = 320 + Math.sin(t*1.2)*20;
+
+  // parametric heart (familiar 16*sin^3 etc)
+  ctx.beginPath();
+  for(let a=0; a < Math.PI*2 + 0.001; a += 0.03){
+    // classic heart parametric
+    const x = 16 * Math.pow(Math.sin(a),3);
+    const y = 13*Math.cos(a) - 5*Math.cos(2*a) - 2*Math.cos(3*a) - Math.cos(4*a);
+    const sx = x * size * 0.04;
+    const sy = -y * size * 0.04; // invert Y for canvas
+    if(a === 0) ctx.moveTo(sx, sy);
+    else ctx.lineTo(sx, sy);
+  }
+
+  // multi-stroke neon
+  for(let w=18; w>0; w-=3){
+    ctx.strokeStyle = `hsla(${hue},92%,62%,${0.02 + (18-w)/40})`;
+    ctx.lineWidth = w;
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+/* ---------- main loop ---------- */
+let last = performance.now();
+function animate(now){
+  const dt = (now - last)/1000;
+  last = now;
+
+  // clear canvases
+  pctx.clearRect(0,0,W,H);
+  nctx.clearRect(0,0,W,H);
+
+  // subtle neon gradient background (on neon canvas)
+  const g = nctx.createLinearGradient(0,0,W,H);
+  g.addColorStop(0,'rgba(123,75,255,0.015)'); g.addColorStop(1,'rgba(255,95,154,0.008)');
+  nctx.fillStyle = g; nctx.fillRect(0,0,W,H);
+
+  // draw dots (background)
+  for(let d of dots){
+    d.x += d.sx;
+    d.y += d.sy;
+    if(d.x < -20) d.x = W + 20;
+    if(d.x > W + 20) d.x = -20;
+    if(d.y < -20) d.y = H + 20;
+    if(d.y > H + 20) d.y = -20;
+
+    pctx.beginPath();
+    pctx.arc(d.x, d.y, d.r, 0, Math.PI*2);
+    pctx.fillStyle = d.color;
+    pctx.fill();
+  }
+
+  // update & draw small particles
+  for(let i = smallParticles.length-1; i>=0; i--){
+    const sp = smallParticles[i];
+    sp.update(dt);
+    if(sp.alpha <= 0.01 || sp.size < 0.5) smallParticles.splice(i,1);
+    else sp.draw(nctx);
+  }
+
+  // update & draw hearts (burst)
+  for(let i = hearts.length-1; i>=0; i--){
+    const h = hearts[i];
+    h.update(dt);
+    if(h.alpha <= 0.01 || h.size < 1 || h.y > H + 80) hearts.splice(i,1);
+    else h.draw(nctx);
+  }
+
+  // draw single neon heart at top-center (slightly above center)
+ drawNeonHeart(nctx, W * 0.5, H * 0.40, Math.min(500, W * 0.40), now * 0.001); 
+
+  requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
+
+/* ---------- ambient spawns to keep scene lively ---------- */
+setInterval(()=> spawnParticles(rand(60, W-60), rand(60, H-60), 5), 1100);
+setInterval(()=> spawnParticles(rand(60, W-60), rand(60, H-60), 4), 1700);
+setInterval(()=> spawnHearts(rand(80, W-80), rand(H-220, H-80), 4), 2400);
+
+/* ---------- interactions: click anywhere on page spawns hearts/particles ---------- */
+document.addEventListener('click', (e) => {
+  // If clicking a UI control (button/link) it's still fine to spawn - canvas pointer-events none allows underlying elements to receive click
+  spawnHearts(e.clientX, e.clientY, 8);
+  spawnParticles(e.clientX, e.clientY, 6);
+});
+
+/* ---------- small hover triggers for your photos (optional) ---------- */
+const p1 = document.getElementById('p1');
+const p2 = document.getElementById('p2');
+if(p1) p1.addEventListener('mouseenter', ()=> spawnHearts(window.innerWidth*0.6, window.innerHeight*0.32, 10));
+if(p2) p2.addEventListener('mouseenter', ()=> spawnHearts(window.innerWidth*0.75, window.innerHeight*0.48, 8));
+
+/* ---------- resize handler ---------- */
+window.addEventListener('resize', ()=>{
+  W = neonCanvas.width = particleCanvas.width = innerWidth;
+  H = neonCanvas.height = particleCanvas.height = innerHeight;
+  // adjust dots count a bit if needed (kept simple — existing dots remain)
+});
+
+/* accessibility: close modal on Esc */
+window.addEventListener('keydown', (e)=> { if(e.key === 'Escape') { modal.classList.remove('show'); modal.style.visibility='hidden'; modal.setAttribute('aria-hidden','true'); } });
+
+// Force page to start from top (Home)
+  window.onload = function () {
+    if (window.location.hash) {
+      window.location.hash = "";
+      window.scrollTo(0, 0);
+    }
+  };
+</script>
+
+<script>
+// navbar
+function toggleMenu() {
+  const navUl = document.querySelector('nav ul');
+  navUl.classList.toggle('show');
+}
+</script>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  const icon = document.getElementById("menuIcon");
+
+  menu.classList.toggle("show");
+
+  if (menu.classList.contains("show")) {
+    icon.classList.remove("fa-heart", "heart");
+    icon.classList.add("fa-bars");
+  } else {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-heart", "heart");
+  }
+}
+</script>
+
+</body>
+</html>
+
