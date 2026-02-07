@@ -219,7 +219,7 @@ This project strengthened both **technical skills and creative sensitivity**.
 
 ---
 
-<span id="future-enhancements">🌱 Future Enhancements</span>
+## <span id="future-enhancements">🌱 Future Enhancements</span>
 
 Planned improvements to preserve elegance while enhancing usability:
 
@@ -232,7 +232,7 @@ These enhancements aim to make the experience more inclusive, smooth, and future
 
 ---
 
-<span id="project-preview">📸 Project Preview</span>
+## <span id="project-preview">📸 Project Preview</span>
 
 🖼️ Rose — Quiet Elegance (Main View)
 
@@ -248,7 +248,7 @@ Subtle canvas-based effects such as neon hearts, floating particles, and ambient
 
 ---
 
-<span id="final-note">🖤 Final Note</span>
+## <span id="final-note">🖤 Final Note</span>
 
 This project is built on a simple belief:
 
@@ -257,4 +257,5 @@ This project is built on a simple belief:
 
 If this experience resonated with you, feel free to ⭐ star the repository.
 Created with patience, respect, and quiet intention.
+
 
