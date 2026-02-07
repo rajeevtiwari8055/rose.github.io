@@ -327,7 +327,7 @@ A poetic visual layout featuring a starry night background, calm color palette, 
 *Animated Heartbeat, Glowing Aura, Floating Sparks, and Soft Pulse Effect*
 Includes a typewriter-style poem animation, interactive modal letters, and soft motion transitions that maintain emotional restraint while staying expressive.
 
-![A Heartfelt Digital Love Expression – Love in Motion](Overview.gif)
+![A Heartfelt Digital Love Expression – Love in Motion](Overview.png)
 
 🖼️ *Alternate Visual* – `Typing Poem & Interactive Sections`
 
@@ -337,6 +337,7 @@ Subtle canvas-based effects such as neon hearts, floating particles, and ambient
 ![A Heartfelt Digital Love Expression – Alt View](Preview.png)
 
 ---
+
 
 
 
