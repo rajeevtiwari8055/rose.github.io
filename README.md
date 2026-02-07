@@ -24,10 +24,8 @@ It is built with **stillness, respect, and emotional depth**.
 - <a href="#learning-outcomes">📚 Learning Outcomes</a>  
 - <a href="#how-to-run">🚀 How to Run</a>  
 - <a href="#future-enhancements">🌱 Future Enhancements</a>
-- <a href="#skills-demonstrated">🧠 Skills Demonstrated</a>  
 - <a href="#use-cases">📂 Use Cases</a>  
 - <a href="#final-note">🖤 Final Note</a>
-- <a href="#conclusion">💖 Conclusion</a>
 - <a href="#contact">📬 Connect with Me</a>    
 - <a href="#project-preview">📸 Project Preview</a>
 
@@ -214,7 +212,7 @@ This project strengthened both **technical skills and creative sensitivity**.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/rose-quiet-elegance.git
+   git clone https://github.com/rajeevtiwari8055.ritu.github.io
    
 2. Open index.html in any modern web browser
 
@@ -233,20 +231,6 @@ Planned improvements to preserve elegance while enhancing usability:
 - ⌨️ Keyboard navigation improvements
 
 These enhancements aim to make the experience more inclusive, smooth, and future-ready.
-
----
-
-## <span id="skills-demonstrated">🧠 Skills Demonstrated</span> 
-
-This small project proves how simple code can tell deep stories.  
-It covers motion, layering, positioning, and creative animation — all done from scratch.
-
-▪️ HTML structure + CSS styling  
-▪️ CSS Animations, Keyframes, Transforms  
-▪️ Creative Positioning, layering, and Z-index  
-▪️ Cursive handwritten font styling for an emotional feel  
-▪️ Using minimal JavaScript only to create dynamic random stars & hearts  
-▪️ Pure frontend motion design and emotion-based micro-interaction
 
 ---
 
@@ -272,13 +256,6 @@ This project is built on a simple belief:
 
 If this experience resonated with you, feel free to ⭐ star the repository.
 Created with patience, respect, and quiet intention.
-
----
-
-## <span id="conclusion">💖 Conclusion</span> 
-
-This tiny page is a reminder that sometimes simple code can say what plain words cannot.  
-From the endless sky to the drifting hearts — it softly promises: true love stays forever.
 
 ---
 
